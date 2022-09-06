@@ -18,8 +18,9 @@ const server = new ApolloServer({
 describe("Repository Template Functionality", () => {
   it("Execute root query", async () => {
     //Arrange
-    const query = 'query { foo(id:"1") { name } }';
-    const expected = { foo: { name: "Name" } };
+    const query =
+      'query { _entities(representations:[{__typename:"Foo",id:"1"}]) { ...on Foo { name } } }';
+    const expected = { _entities: [{ name: "Name" }] };
 
     //Act
     const response = await server.executeOperation({ query });
