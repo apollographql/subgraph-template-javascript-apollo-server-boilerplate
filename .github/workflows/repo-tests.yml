@@ -23,4 +23,4 @@ jobs:
       - name: Setup project
         run: npm install
       - name: Run Unit Tests
-        run: npm run test:ci
+        run: npm run test
