@@ -1,0 +1,5 @@
+dependencies:
+  node:
+    verify_command: node --version
+    failure_message: Node wasn't found
+postCloneHook: echo "Success"
