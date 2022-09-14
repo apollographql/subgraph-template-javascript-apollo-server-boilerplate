@@ -11,7 +11,7 @@ const port = process.env.PORT ?? 4001;
 
 async function main() {
   const typeDefs = gql(
-    readFileSync("src/schema.graphql", {
+    readFileSync("schema.graphql", {
       encoding: "utf-8",
     })
   );
