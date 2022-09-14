@@ -28,9 +28,6 @@ main();
 
 async function cleanup() {
   console.log("\tCleaning up template files");
-
-  await rm("package-lock.json", { force: true });
-  await rm("node_modules", { recursive: true });
   await rm("template", { recursive: true });
 }
 
