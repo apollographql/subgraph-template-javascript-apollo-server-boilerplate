@@ -29,9 +29,9 @@ async function main() {
   }
 
   //Clean up template folder
-  rm("package-lock.json", { force: true });
-  rm("node_modules", { recursive: true });
-  rm(".template", { recursive: true });
+  rm("package-lock.json", { force: true }, () => {});
+  rm("node_modules", { recursive: true }, () => {});
+  rm(".template", { recursive: true }, () => {});
 }
 
 main();
