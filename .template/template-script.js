@@ -5,10 +5,11 @@ const {
   writeFileSync,
   rmSync,
 } = require("fs");
+const prompts = require("prompts");
 
 async function main() {
   try {
-    const response = await require("prompts").prompts({
+    const response = await prompts({
       type: "select",
       name: "value",
       message: "Would you like to have the schema mocked using graphql-tools?",
