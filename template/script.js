@@ -38,6 +38,6 @@ async function swapMocks() {
     resolve(__dirname, "..", "src", "index.js")
   );
 
-  console.log("\tInstalling graphql-tools");
-  execSync("npm i graphql-tools");
+  console.log("\tInstalling @graphql-tools/mock");
+  execSync("npm i @graphql-tools/mock");
 }
