@@ -1,5 +1,0 @@
-dependencies:
-  node:
-    verify_command: node --version
-    failure_message: You must have Node installed to use this template. Install Node at https://nodejs.org/en/
-post_clone_hook: npm i && node ./template/script.js

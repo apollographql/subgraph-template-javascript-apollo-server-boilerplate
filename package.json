@@ -19,7 +19,8 @@
   "scripts": {
     "dev": "nodemon --ext \"js,graphql\" src/index.js",
     "start": "node src/index.js",
-    "test": "jest"
+    "test": "jest",
+    "setup": "node .template/setup.js"
   },
   "dependencies": {
     "@apollo/server": "^4.0.0-alpha.10",

@@ -1,0 +1,24 @@
+custom_output_message: >
+  Success! Created rover-template at ${path}
+
+  Inside that directory, you can run several commands:
+
+    npm start
+      Starts the subgraph.
+
+    npm run dev
+      Starts the subgraph with nodemon
+
+    npm test
+      Starts the test runner.
+
+  There is a setup script if you want to add additional functionality (like mocking). We suggest that you begin by typing:
+
+    cd ${path}
+    npm install
+    npm run setup <- If you want to run wizard to add mocking
+    npm run start
+
+  Note: You must have Node >=14.0 installed to use this template. If you don't have Node installed, head over to https://nodejs.org/en/download/.
+
+  Happy hacking!
