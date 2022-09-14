@@ -1,10 +1,4 @@
-const {
-  copyFileSync,
-  rmdirSync,
-  constants,
-  writeFileSync,
-  rmSync,
-} = require("fs");
+const { copyFileSync, rm, constants, writeFileSync } = require("fs");
 const prompts = require("prompts");
 
 async function main() {
@@ -35,9 +29,9 @@ async function main() {
   }
 
   //Clean up template folder
-  rmSync("package-lock.json");
-  rmdirSync("node_modules");
-  rmdirSync(".template");
+  rm("package-lock.json", { force: true });
+  rm("node_modules", { recursive: true });
+  rm(".template", { recursive: true });
 }
 
 main();
