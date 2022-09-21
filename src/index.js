@@ -6,6 +6,7 @@ const { startStandaloneServer } = require("@apollo/server/standalone");
 
 const resolvers = require("./resolvers");
 const port = process.env.PORT ?? 4001;
+const subgraphName = require("../package.json").name;
 
 async function main() {
   const typeDefs = gql(
@@ -26,7 +27,11 @@ async function main() {
     }),
     listen: { port },
   });
+
   console.log(`🚀  Subgraph ready at ${url}`);
+  console.log(
+    `Run 'rover dev --url http://localhost:${port} --name ${subgraphName}`
+  );
 }
 
 main();

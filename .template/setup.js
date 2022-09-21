@@ -15,7 +15,7 @@ async function main() {
   });
   console.log("complete");
   rl.question(
-    "Would you like to have the schema mocked using graphql-tools?",
+    "Would you like to have the schema mocked using graphql-tools? (y/n)",
     async (answer) => {
       if (answer.toLowerCase()[0] == "y") {
         await swapMocks();
@@ -50,12 +50,6 @@ async function swapMocks() {
 
     process.stdout.write("\tInstalling @graphql-tools/mock...");
     execSync("npm i @graphql-tools/mock");
-
-    const fileName = "../package.json";
-    const file = require(fileName);
-    delete file.scripts["setup"];
-
-    await writeFile(resolve(fileName), JSON.stringify(file, null, 2));
   } catch (err) {
     console.log(`\n${err}`);
   }

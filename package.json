@@ -1,5 +1,5 @@
 {
-  "name": "subgraph-template-javascript-apollo-server-boilerplate",
+  "name": "subgraph-template-javascript-apollo-server",
   "description": "A boilerplate template for Apollo Server with javascript",
   "version": "0.0.0",
   "author": "Apollo <watson@apollographql.com>",
