@@ -3,7 +3,7 @@ name: Introspect subgraph name
 on:
   workflow_call:
     outputs:
-      subgraph_name:
+      name:
         description: "Name of the subgraph to check or publish"
         value: ${{ jobs.get_subgraph_name.outputs.name }}
 jobs:
