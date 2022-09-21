@@ -2,6 +2,9 @@ name: Tests and Checks
 on: push
 
 jobs:
+  subgraph_name:
+    uses: ./.github/workflows/apollo.yaml
+
   check_schema:
     name: Check Schema with Apollo Studio
     runs-on: ubuntu-latest
