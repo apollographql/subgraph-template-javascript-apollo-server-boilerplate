@@ -18,12 +18,13 @@ async function main() {
     "Would you like to have the schema mocked using graphql-tools?",
     async (answer) => {
       if (answer.toLowerCase()[0] == "y") {
-        swapMocks();
+        await swapMocks();
 
         rl.close();
       }
     }
   );
+
   rl.on("close", async function () {
     await cleanup();
     process.exit(0);
@@ -40,20 +41,23 @@ async function cleanup() {
 
 async function swapMocks() {
   process.stdout.write("\tSwapping mocking template in...");
-  console.log("\tSwapping mocking template in");
-  await copyFile(
-    resolve(__dirname, "mock.js"),
-    resolve(__dirname, "..", "src", "index.js")
-  );
-  console.log("complete");
+  try {
+    await copyFile(
+      resolve(__dirname, "mock.js"),
+      resolve(__dirname, "..", "src", "index.js")
+    );
+    console.log("complete");
 
-  process.stdout.write("\tInstalling @graphql-tools/mock...");
-  execSync("npm i @graphql-tools/mock");
+    process.stdout.write("\tInstalling @graphql-tools/mock...");
+    execSync("npm i @graphql-tools/mock");
 
-  const fileName = "../package.json";
-  const file = require(fileName);
-  delete file.scripts.setup;
-  await writeFile(fileName, JSON.stringify(fileName, null, 2));
+    const fileName = "../package.json";
+    const file = require(fileName);
+    delete file.scripts["setup"];
 
+    await writeFile(resolve(fileName), JSON.stringify(file, null, 2));
+  } catch (err) {
+    console.log(`\n${err}`);
+  }
   console.log("complete");
 }
