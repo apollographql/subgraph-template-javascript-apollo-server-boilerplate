@@ -19,9 +19,9 @@ describe("Repository Template Functionality", () => {
   it("Execute root query", async () => {
     //Arrange
     const query =
-      'query { _entities(representations:[{__typename:"Foo",id:"1"}]) { ...on Foo { name } } }';
+      'query { _entities(representations:[{__typename:"Thing",id:"1"}]) { ...on Thing { name } } }';
     const expected = { _entities: [{ name: "Name" }] };
-
+ 
     //Act
     const response = await server.executeOperation({ query });
 

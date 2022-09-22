@@ -1,10 +1,10 @@
 module.exports = {
   Query: {
-    foo(parent, { id }, context) {
+    thing(parent, { id }, context) {
       // Access datasources on the context
       //
-      // return context.foos.getFoo(args.id)
-      return { id: "1", name: "Name" };
+      // return context.things.getThing(id)
+      return { id, name: "Name" };
     },
   },
 };

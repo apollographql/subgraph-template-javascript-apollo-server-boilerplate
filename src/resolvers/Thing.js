@@ -1,10 +1,10 @@
 module.exports = {
-  Foo: {
+  Thing: {
     __resolveReference(parent, context) {
       // Access datasources on the context
       //
-      // return context.foos.getFoo(parent.id)
-      return { id: "1", name: "Name" };
+      // return context.things.getThing(parent.id)
+      return { id: parent.id, name: parent.name ?? "Name" };
     },
   },
 };
