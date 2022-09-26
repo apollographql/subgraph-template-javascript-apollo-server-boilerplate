@@ -34,6 +34,8 @@ describe("Repository Template Functionality", () => {
     const response = await server.executeOperation({ query, variables });
 
     //Assert
-    expect(response.result.data).toEqual(expected);
+    // expect(response.result.data).toEqual(expected);
+    expect(response.body.kind).toEqual("single");
+    expect(response.body.singleResult.data).toEqual(expected);
   });
 });
