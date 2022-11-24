@@ -15,7 +15,7 @@ This template can be used to quickly create an [Apollo Federation] subgraph with
 ## Next Steps
 
 - Setup project with `npm install` 
-- Download [Rover] and start it using the command printed out from `cargo run` to start a local version of Apollo Explorer.
+- Download [Rover] and start it using the command printed out from `npm start` to start a local version of Apollo Explorer.
 - Replace "name" in `package.json` with the name of your subgraph.
 - Start filling in your own schema in `schema.graphql`.
 - Start filling in your own types and resolvers in `src/resolvers`.
