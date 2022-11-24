@@ -30,7 +30,7 @@ async function main() {
 
   console.log(`🚀  Subgraph ready at ${url}`);
   console.log(
-    `Run 'rover dev --url http://localhost:${port} --name ${subgraphName}`
+    `In a new terminal, run 'rover dev --url http://localhost:${port} --name ${subgraphName}`
   );
 }
 
