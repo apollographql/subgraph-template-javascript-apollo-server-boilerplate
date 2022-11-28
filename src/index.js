@@ -20,7 +20,7 @@ async function main() {
   const { url } = await startStandaloneServer(server, {
     context: async ({ req }) => ({
       // Add what you need at context creation
-      //  to be available in resovlers (i.e. context.foos)
+      //  to be available in resolvers (i.e. context.foos)
       //
       // auth: req.headers.authentication,
       // foos: new FooDataSource(),
@@ -30,7 +30,7 @@ async function main() {
 
   console.log(`🚀  Subgraph ready at ${url}`);
   console.log(
-    `Run 'rover dev --url http://localhost:${port} --name ${subgraphName}`
+    `In a new terminal, run 'rover dev --url http://localhost:${port} --name ${subgraphName}`
   );
 }
 
