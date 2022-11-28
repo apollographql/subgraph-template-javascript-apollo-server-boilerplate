@@ -21,8 +21,8 @@ This template can be used to quickly create an [Apollo Federation] subgraph with
 - Start filling in your own schema in `schema.graphql`.
 - Start filling in your own types and resolvers in `src/resolvers`.
 - Set these secrets in GitHub Actions to enable all checks:
-  - `APOLLO_KEY`: An Apollo Studio API key for the supergraph to enable schema checks and publishing of the subgraph.
-  - `APOLLO_GRAPH_REF`: The name of the supergraph in Apollo Studio.
+  - `APOLLO_KEY`: An Apollo Studio API key for the supergraph to enable schema checks and publishing of the subgraph. Check the Apollo documentation for [how to obtain this API key].
+  - `APOLLO_GRAPH_REF`: A string with the following format: `graph_id@variant_name`. You can find your graph's ID in that graph's Settings page in Studio.
   - `PRODUCTION_URL`: The URL of the deployed subgraph that the supergraph gateway will route to.
 - Remove the if: false lines from .github/workflows/checks.yaml and .github/workflows/deploy.yaml to enable schema checks and publishing.
 - Write your custom deploy logic in `.github/workflows/deploy.yaml`.
@@ -32,3 +32,4 @@ This template can be used to quickly create an [Apollo Federation] subgraph with
 [@apollo/subgraph]: https://www.apollographql.com/docs/federation/subgraphs
 [rover]: https://www.apollographql.com/docs/rover/
 [nodemon]: https://www.npmjs.com/package/nodemon
+[how to obtain this api key]: https://www.apollographql.com/docs/graphos/api-keys/#graph-api-keys
