@@ -4,5 +4,6 @@
     "config:base",
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)"
-  ]
+  ],
+  "automerge": true
 }
