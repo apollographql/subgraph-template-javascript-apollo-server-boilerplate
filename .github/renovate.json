@@ -5,5 +5,9 @@
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)"
   ],
-  "automerge": true
+  "automerge": true,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
 }
