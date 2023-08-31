@@ -9,5 +9,5 @@
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
-  },
+  }
 }
