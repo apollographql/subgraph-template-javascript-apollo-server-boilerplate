@@ -27,7 +27,7 @@
     "graphql-tag": "latest"
   },
   "devDependencies": {
-    "jest": "30.4.1",
+    "jest": "30.4.2",
     "nodemon": "3.1.14"
   }
 }
